@@ -1,0 +1,1 @@
+export const buttonStyle = 'hover:bg-sky-100 rounded-md m-2';

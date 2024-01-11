@@ -3,19 +3,16 @@ import CustomLink from "./CustomLink";
 const navLinks = ['home', 'portfolio', 'contact', 'blog']
 
 function Nav() {
-    
     return (
-        <div className='[&>*]:p-4 flex flex-row'>
+        <div className='[&>*]:p-2 flex flex-row justify-between'>
             <div className='font-mono text-5xl'>HF</div>
+            <div className='[&>*]:p-2'>
             {navLinks.map(x => {
                 return <CustomLink key={x} title={x} />
-                // make an exception for the blog link -- it should link to a new tab and the cursor should be an outlink icon
             })}
+            </div>
         </div>
     );
 }
 
 export default Nav;
-// const path = usePathname();
-// 'use client'
-// import { usePathname } from 'next/navigation';
