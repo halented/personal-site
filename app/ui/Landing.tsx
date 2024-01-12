@@ -1,6 +1,5 @@
 import Image from "next/image";
 import camping from '../assets/camping.png';
-import dashpoint from '../assets/dashpoint.png';
 import hal from '../assets/hal.jpeg';
 import { buttonStyle } from "../lib/styles";
 
@@ -26,5 +25,3 @@ function Landing() {
 }
 
 export default Landing;
-// /Users/halfriday/Documents/dev/personal-site/app/assets/dashpoint.png
-// app/assets/dashpoint.png
