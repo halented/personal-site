@@ -8,11 +8,11 @@ export const getHref = (title) => {
         case 'home':
             return '/'
         case 'portfolio':
-            return '/portfolio'
+            return '/#portfolio'
         case 'blog':
             return 'https://dev.to/halented'
         case 'contact':
-            return '/contact'
+            return '/#contact'
         default:
             return '/'
     }
