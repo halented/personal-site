@@ -1,22 +1,14 @@
 import Divider from "./Divider";
+import Header from "./Header";
+import { childContainerStyle } from "../lib/styles";
 
 function Portfolio() {
-    const childContainerStyle = '[&>*]:m-2 flex justify-between w-4/5'
 
     return (
         <div id='portfolio'>
             <Divider style='mr-64' />
             <div className="flex flex-col items-center">
-                <div className={`${childContainerStyle} flex-row-reverse`}>
-                    <div className="relative">
-                        <div className="text-4xl h-14 flex items-center">
-                            Portfolio
-                        </div>
-                        <div className="absolute top-0 right-2 -z-1 text-7xl opacity-10 font-bold">
-                            PORTFOLIO
-                        </div>
-                    </div>
-                </div>
+                <Header title='Portfolio' emphasisWord='PORTFOLIO' flexRight={true}/>
                 <div className={childContainerStyle}>
                     •	classkick: can i get gifs of work I did? can i make them on their app still?
                     <br />

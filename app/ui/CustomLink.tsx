@@ -2,10 +2,8 @@
 import Link from 'next/link';
 import { getHref } from '../lib/helpers';
 import clsx from 'clsx';
-import { usePathname } from 'next/navigation';
 import { navButtonStyle } from '../lib/styles';
 import { useUrl } from 'nextjs-current-url';
-import { useEffect } from 'react';
 
 function CustomLink({ title, key }: { title: string, key: string }) {
 
@@ -15,6 +13,7 @@ function CustomLink({ title, key }: { title: string, key: string }) {
 
     const isActive = () => {
         // this logic is sound BUT, isActive is not triggered to run again unless the page is hard-refreshed, so whatever we load into evaluates as the active link regardless of if you click around
+        // currentUrl does not get updated when user clicks a new link, only on hard refresh
         if (currentUrl) {
             const segments = currentUrl.split('/')
             const compareUrl = segments[segments.length-1]
@@ -32,11 +31,6 @@ function CustomLink({ title, key }: { title: string, key: string }) {
         else return false
     }
     //isActive() 
-
-    useEffect(() => {
-        console.log('currentUrl changed: ', currentUrl);
-        // currentUrl does not get updated when user clicks a new link, only on hard refresh
-    }, [currentUrl])
 
     if (href.startsWith('/')) {
         return (

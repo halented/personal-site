@@ -1,8 +1,10 @@
 import Image from "next/image";
 import camping from '../assets/camping.png';
 import hal from '../assets/hal.jpeg';
-import { buttonStyle } from "../lib/styles";
+import { buttonStyle, childContainerStyle } from "../lib/styles";
 import Divider from "./Divider";
+import Header from "./Header";
+import Link from "next/link";
 
 const imgStyle = {
   borderRadius: '3rem',
@@ -11,7 +13,7 @@ const imgStyle = {
 }
 
 function Landing() {
-  const childContainerStyle = '[&>*]:m-2 flex justify-between w-4/5'
+  const title = "I'm Hal Friday!";
 
   return (
     <>
@@ -23,19 +25,12 @@ function Landing() {
               <div className="flex flex-row">
                 <div className="text-2xl">Hello,</div>
               </div>
-              <div className="relative">
-                <div className="text-4xl h-14 flex items-center">
-                  I{`'`}m Hal Friday!
-                </div>
-                <div className="absolute top-0 -z-1 text-7xl opacity-10 font-bold">
-                  HALFRIDAY
-                </div>
-              </div>
+              <Header title={title} emphasisWord="HALFRIDAY" flexRight={false}/>
               <div className="uppercase mt-2">A frontend focused, full stack developer.</div>
             </div>
             <div className="flex flex-row">
-              <p className={buttonStyle}>See Resume</p>
-              <p className={buttonStyle}>Contact Me</p>
+              <Link className={`cursor-alias ${buttonStyle}`} key='resume' href='https://www.canva.com/design/DAFxvDRoFaY/LnAoxx9CURUUYoggEphxrA/edit' rel="noopener noreferrer" target="_blank">See Resume</Link>
+              <Link className={buttonStyle} href='/#contact' key='contact'>Contact Me</Link>
             </div>
           </div>
           <div className="z-1 relative">
@@ -43,7 +38,7 @@ function Landing() {
           </div>
         </div>
         <div className={`pt-12 ${childContainerStyle}`}>
-          <div className="z-1">
+          <div className="z-1 hidden md:block">
             <Image src={camping} alt='Hal sitting in a camping chair next to a small black dog, the two of them are flanked by a wooden picnic table to the left and a camping tent to the right.' width={147.2} height={192.6} style={imgStyle}></Image>
           </div>
           <div className="z-1 flex items-center">Stand-in blurb here. Should be somewhere between 300 and 600 characters. Should encapsulate Hal as a developer first and a person second since that{`'`}s probably what job people are looking for. Should be light hearted but believable, professional, engaging. Should lead you to the next page action.</div>
