@@ -5,7 +5,7 @@ import Portfolio from "../ui/Portfolio";
 export default function Home() {
   return (
     <main>
-      <div className="mt-12">
+      <div className="mt-14">
         <Landing />
         <Portfolio />
         <Contact />
