@@ -28,7 +28,7 @@ function Portfolio() {
                     <br />
                     •	flatiron: picture of me with students, work description
                     <br />
-                    •	This website you're lookin at! written in nextjs, react, typescript, & tailwind
+                    •	This website you{`'`}re lookin at! written in nextjs, react, typescript, & tailwind
                     <br />
                     •	better book base: teaser with link to design doc
                 </div>

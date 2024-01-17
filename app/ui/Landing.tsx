@@ -25,7 +25,7 @@ function Landing() {
               </div>
               <div className="relative">
                 <div className="text-4xl h-14 flex items-center">
-                  I'm Hal Friday!
+                  I{`'`}m Hal Friday!
                 </div>
                 <div className="absolute top-0 -z-1 text-7xl opacity-10 font-bold">
                   HALFRIDAY
@@ -46,7 +46,7 @@ function Landing() {
           <div className="z-1">
             <Image src={camping} alt='Hal sitting in a camping chair next to a small black dog, the two of them are flanked by a wooden picnic table to the left and a camping tent to the right.' width={147.2} height={192.6} style={imgStyle}></Image>
           </div>
-          <div className="z-1 flex items-center">Stand-in blurb here. Should be somewhere between 300 and 600 characters. Should encapsulate Hal as a developer first and a person second since that's probably what job people are looking for. Should be light hearted but believable, professional, engaging. Should lead you to the next page action.</div>
+          <div className="z-1 flex items-center">Stand-in blurb here. Should be somewhere between 300 and 600 characters. Should encapsulate Hal as a developer first and a person second since that{`'`}s probably what job people are looking for. Should be light hearted but believable, professional, engaging. Should lead you to the next page action.</div>
         </div>
       </div>
     </>
