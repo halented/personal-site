@@ -6,7 +6,7 @@ function Portfolio() {
 
     return (
         <div id='portfolio'>
-            <Divider style='mr-64' />
+            <Divider style='mr-64'/>
             <div className="flex flex-col items-center">
                 <Header title='Portfolio' emphasisWord='PORTFOLIO' flexRight={true}/>
                 <div className={childContainerStyle}>
