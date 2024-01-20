@@ -1,8 +1,8 @@
 'use client'
 import Link from 'next/link';
-import { getHref } from '../lib/helpers';
+import { getHref } from '../../lib/helpers';
 import clsx from 'clsx';
-import { navButtonStyle } from '../lib/styles';
+import { navButtonStyle } from '../../lib/styles';
 import { useUrl } from 'nextjs-current-url';
 
 function CustomLink({ title, key }: { title: string, key: string }) {

@@ -1,10 +1,11 @@
 import Image from "next/image";
-import camping from '../assets/camping.png';
-import hal from '../assets/hal.jpeg';
-import { buttonStyle, childContainerStyle, bubble } from "../lib/styles";
-import Divider from "./Divider";
-import Header from "./Header";
+import camping from '@/app/assets/camping.png'
+import hal from '@/app/assets/hal.jpeg';
+import { buttonStyle, childContainerStyle } from "@/app/lib/styles";
+import Divider from "../common/Divider";
+import Header from "../common/Header";
 import Link from "next/link";
+import Bubble from "../common/Bubble";
 
 const imgStyle = {
   borderRadius: '3rem',
@@ -17,7 +18,7 @@ function Landing() {
 
   return (
     <>
-      <Divider style='ml-64'/>
+      <Divider style='ml-64' />
       <div className="flex flex-col items-center">
         <div className={`${childContainerStyle}`}>
           <div className="z-1 pt-12">
@@ -26,7 +27,7 @@ function Landing() {
               <div className="flex flex-row">
                 <div className="text-2xl">Hello,</div>
               </div>
-              <Header title={title} emphasisWord="HALFRIDAY" flexRight={false}/>
+              <Header title={title} emphasisWord="HALFRIDAY" flexRight={false} />
               <div className="uppercase mt-2">A frontend focused, full stack developer.</div>
             </div>
             {/* buttons block */}
@@ -47,10 +48,10 @@ function Landing() {
           </div>
           {/* blurb block */}
           <div className="flex items-center relative">
-            <div className="z-[1]">Stand-in blurb here. Should be somewhere between 300 and 600 characters. Should encapsulate Hal as a developer first and a person second since that{`'`}s probably what job people are looking for. Should be light hearted but believable, professional, engaging. Should lead you to the next page action.</div>
-            <div className={`h-40 w-40 left-6 ${bubble}`}></div>
-            <div className={`hidden sm:block h-40 w-40 left-20 bottom-6 ${bubble}`}></div>
-            <div className={`h-20 w-20 right-10 top-6 ${bubble}`}></div>
+            <div className="z-[1] text-right">Stand-in blurb here. Should be somewhere between 300 and 600 characters. Should encapsulate Hal as a developer first and a person second since that{`'`}s probably what job people are looking for. Should be light hearted but believable, professional, engaging. Should lead you to the next page action.</div>
+            <Bubble tailwindHeight='h-40' tailwindWidth='w-40' style='left-6' />
+            <Bubble tailwindHeight='h-40' tailwindWidth='w-40' style='hidden sm:block left-20 bottom-6' />
+            <Bubble tailwindHeight='h-20' tailwindWidth='w-20' style='right-10 top-6' />
           </div>
         </div>
       </div>

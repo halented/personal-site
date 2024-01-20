@@ -1,4 +1,4 @@
-import { childContainerStyle } from '../lib/styles'
+import { childContainerStyle } from '../../lib/styles'
 
 function Header({ title, emphasisWord, flexRight }: { title: string, emphasisWord: string, flexRight: boolean }) {
     return (

@@ -1,7 +1,7 @@
-import Divider from "./Divider";
-import Header from "./Header";
-import ContactCard from "./ContactCard";
-import { childContainerStyle } from "../lib/styles";
+import Divider from "../common/Divider";
+import Header from "../common/Header";
+import ContactCard from "../ContactCard";
+import { childContainerStyle } from "../../lib/styles";
 
 const contactMethods = [{ title: 'github', detail: 'Poke around my personal projects!', resource: 'https://github.com/halented' }, { title: 'linkedin', detail: 'Connect with me!', resource: 'https://www.linkedin.com/in/halented/' }, { title: 'blog', detail: 'Check out my latest posts!', resource: 'https://www.dev.to/halented' }, { title: 'email', detail: 'Drop a message in my inbox!', resource: 'heyhalfriday@gmail.com' }, { title: 'phone', detail: 'Send me a text! Or call if you must.', resource: '206-551-5709' }];
 

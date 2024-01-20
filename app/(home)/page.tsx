@@ -1,6 +1,6 @@
-import Contact from "../ui/Contact";
-import Landing from "../ui/Landing";
-import Portfolio from "../ui/Portfolio";
+import Contact from "../ui/siteSections/Contact";
+import Landing from "../ui/siteSections/Landing";
+import Portfolio from "../ui/siteSections/Portfolio";
 
 export default function Home() {
   return (
