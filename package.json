@@ -13,7 +13,8 @@
     "next": "14.0.4",
     "nextjs-current-url": "^1.0.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-simple-toasts": "^5.10.0"
   },
   "devDependencies": {
     "@types/node": "^20",
