@@ -1,8 +1,6 @@
-import { PortfolioSectionType } from "../lib/data";
+import { monthNames } from '../lib/data'
 
-const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
-
-function PortfolioItemHeader({ section }: { section: PortfolioSectionType }) {
+function PortfolioItemHeader({ title, dates }: { title: string, dates?: { start: Date, end?: Date } }) {
 
     /**
      * 
@@ -16,7 +14,7 @@ function PortfolioItemHeader({ section }: { section: PortfolioSectionType }) {
 
     return (
         <div className="italic font-bold">
-            <div>{section.title} • {section.dates ? formatDateRange(section.dates) : 'Ongoing'}</div>
+            <div>{title} • {dates ? formatDateRange(dates) : 'Ongoing'}</div>
         </div>
     );
 }

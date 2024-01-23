@@ -1,12 +1,12 @@
 import PortfolioItemHeader from "./PortfolioItemHeader";
 import { PortfolioSectionType } from "../lib/data";
-import PortfolioItemDetail from "./PortfolioItemDetail";
+import PortfolioItemBody from "./PortfolioItemBody";
 
 function PortfolioItem({ section }: { section: PortfolioSectionType }) {
     return (
         <>
-            <PortfolioItemHeader section={section} />
-            <PortfolioItemDetail />
+            <PortfolioItemHeader title={section.title} dates={section.dates}/>
+            <PortfolioItemBody title={section.title} works={section.works}/>
         </>
     );
 }
