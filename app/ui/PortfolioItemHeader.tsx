@@ -13,7 +13,7 @@ function PortfolioItemHeader({ title, dates }: { title: string, dates?: { start:
     }
 
     return (
-        <div className="italic font-bold">
+        <div className="font-mono m-0">
             <div>{title} • {dates ? formatDateRange(dates) : 'Ongoing'}</div>
         </div>
     );
