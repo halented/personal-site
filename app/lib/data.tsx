@@ -22,15 +22,23 @@ export const sections: PortfolioSectionType[] = [
         works: [
             {
                 img: 'signupForm',
-                description: 'MULTI-PAGE SIGN UP FORM. Project Lead / Full Responsibility'
+                description: `<b>Multi-Page Signup Form</b> <br /> Project Lead / Full Responsibility`
             },
             {
                 img: 'verificationForm',
-                description: 'SCHOOL VERIFICATION FORM. Project Lead / Full Responsibility'
+                description: `<b>School Verification Form</b> <br /> Project Lead / Full Responsibility`
             },
             {
-                img: 'somethin',
-                description: 'heres a third, i want to see how the boxes behave.'
+                img: 'studentDashboard',
+                description: `<b>Student Dashboard Updates</b> <br /> Contributor / Partial Responsibility`
+            },
+            {
+                img: 'textToSpeech',
+                description: `<b>Text to Speech Implementation</b> <br /> Contributor / Partial Responsibility`
+            },
+            {
+                img: 'bugs',
+                description: `<b>Bughunter Extraordinaire</b> <br /> Contributor / Partial Responsibility`
             }
         ]
     },
@@ -42,16 +50,12 @@ export const sections: PortfolioSectionType[] = [
         },
         works: [
             {
-                img: 'imgTitle',
-                description: 'words about the image you are seeing and work i did'
+                img: 'documentation',
+                description: '<b>Workflows Documentation</b> <br /> Contributor / Partial Responsibility'
             },
             {
-                img: 'secondImgTitle',
-                description: 'this work was challenging in other ways'
-            },
-            {
-                img: 'somethin',
-                description: 'heres a third, i want to see how the boxes behave.'
+                img: 'pluginShowcase',
+                description: '<b>Plugin Showcase Builder</b> <br /> Contributor / Majority Responsibility'
             }
         ]
     },
@@ -63,16 +67,16 @@ export const sections: PortfolioSectionType[] = [
         },
         works: [
             {
-                img: 'imgTitle',
-                description: 'words about the image you are seeing and work i did'
+                img: 'flatiron1',
+                description: '<b>JavaScript/React Lectures</b> <br /> Functional Programming, Data Flow'
             },
             {
-                img: 'secondImgTitle',
-                description: 'this work was challenging in other ways'
+                img: 'flatiron2',
+                description: '<b>Algorithm Lectures</b> <br /> Introduction to Data Structures'
             },
             {
-                img: 'somethin',
-                description: 'heres a third, i want to see how the boxes behave.'
+                img: 'codeReview',
+                description: '<b>Deep Code Critique</b> <br /> For Tests, Coursework and Final Projects'
             }
         ]
     },
@@ -80,16 +84,12 @@ export const sections: PortfolioSectionType[] = [
         title: 'Personal Projects',
         works: [
             {
-                img: 'imgTitle',
-                description: 'words about the image you are seeing and work i did'
+                img: 'personalSite',
+                description: '<b>This website!</b> <br /> Check out the <a href="https://github.com/halented/personal-site" rel="noopener noreferrer" target="_blank" style="color:blue;cursor:pointer;">codebase</a>'
             },
             {
-                img: 'secondImgTitle',
-                description: 'this work was challenging in other ways'
-            },
-            {
-                img: 'somethin',
-                description: 'heres a third, i want to see how the boxes behave.'
+                img: 'b3',
+                description: '<b>Better Book Base</b> <br /> In planning phase. Check out the <a href="https://observant-methane-45b.notion.site/Better-Book-Base-f562e81435914d629612c02eb907f7d3" rel="noopener noreferrer" target="_blank" style="color:blue;cursor:pointer;">design doc</a>'
             }
         ]
     },

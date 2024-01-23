@@ -10,7 +10,6 @@ function Portfolio() {
         <div id='portfolio'>
             <Divider style='mr-64' />
             <div className="flex flex-col items-center">
-            scroll snap snap-center
                 <Header title='Portfolio' emphasisWord='PORTFOLIO' flexRight={true} />
                 <div className={`${childContainerStyle} flex-col items-center`}>
                     {sections.map(s => <PortfolioItem section={s} key={s.title}/>)}
