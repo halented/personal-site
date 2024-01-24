@@ -48,7 +48,7 @@ function Landing() {
           </div>
           {/* blurb block */}
           <div className="flex items-center relative">
-            <div className="z-[1] text-right">Stand-in blurb here. Should be somewhere between 300 and 600 characters. Should encapsulate Hal as a developer first and a person second since that{`'`}s probably what job people are looking for. Should be light hearted but believable, professional, engaging. Should lead you to the next page action.</div>
+            <div className="z-[1] text-right">For the past two years, I{`'`}ve worked professionally with JavaScript and AngularJS, and I love using React + TypeScript for my personal projects. I enjoy exploring new tools for the job as well -- just this year I rebuilt this website in NextJS to see what all the fuss was about! In my spare time, you can usually find me walking a dog, reading some fantasy book, or getting out into the elements on a camping trip or Tough Mudder course. If you{`'`}d like to check out some previous work, head down to the <Link href='/#portfolio' key='portfolio' className='text-sky-400 drop-shadow-lg'>portfolio</Link> section below. Or,  <Link href='/#contact' key='contact' className='text-sky-400 drop-shadow-lg'>feel free to drop a line</Link>. I{`'`}d love to set up a chat!</div>
             <Bubble tailwindHeight='h-40' tailwindWidth='w-40' style='left-6' />
             <Bubble tailwindHeight='h-40' tailwindWidth='w-40' style='hidden sm:block left-20 bottom-6' />
             <Bubble tailwindHeight='h-20' tailwindWidth='w-20' style='right-10 top-6' />

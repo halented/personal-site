@@ -42,7 +42,7 @@ function ContactCard({ method }: { method: ContactMethod }) {
             {method.resource.startsWith('http') ?
                 <Link href={method.resource} target="_blank"> {renderCardInner()} </Link>
                 :
-                <div onClick={handleClick}>{renderCardInner()}</div>
+                <div onClick={handleClick}> {renderCardInner()} </div>
             }
 
         </>

@@ -1,8 +1,7 @@
-import { Work } from "../lib/data";
-import Bubble from "./common/Bubble";
+import { WorkType } from "../lib/data";
 import PortfolioItemDetail from "./PortfolioItemDetail";
 
-function PortfolioItemBody({ title, works }: { title: string, works: Work[] }) {
+function PortfolioItemBody({ title, works }: { title: string, works: WorkType[] }) {
     return (
         <div className="w-full p-4 flex flex-nowrap overflow-x-scroll">
             {works.map(w => <PortfolioItemDetail key={title} work={w}/>)}
