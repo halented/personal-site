@@ -21,20 +21,16 @@ function Landing() {
       <Divider style='ml-64' />
       <div className="flex flex-col items-center">
         <div className={`${childContainerStyle}`}>
-          <div className="z-1 pt-12">
-            {/* intro block */}
-            <div className="flex flex-col font-mono">
-              <div className="flex flex-row">
-                <div className="text-2xl">Hello,</div>
-              </div>
-              <Header title={title} emphasisWord="HALFRIDAY" flexRight={false} />
-              <div className="uppercase mt-2">A frontend focused, full stack developer.</div>
-            </div>
-            {/* buttons block */}
-            <div className="flex flex-row">
-              <Link className={`cursor-alias ${buttonStyle}`} key='resume' href='https://www.canva.com/design/DAFxvDRoFaY/LnAoxx9CURUUYoggEphxrA/edit' rel="noopener noreferrer" target="_blank">See Resume</Link>
-              <Link className={buttonStyle} href='/#contact' key='contact'>Contact Me</Link>
-            </div>
+          <div className="text-2xl font-mono">Hello,</div>
+        </div>
+        <Header title={title} emphasisWord="HALFRIDAY" flexRight={false} />
+        <div className={`${childContainerStyle}`}>
+          <div className="uppercase mt-2 font-mono">A frontend focused, full stack developer.</div>
+        </div>
+        <div className={`${childContainerStyle}`}>
+          <div className="flex flex-row h-fit">
+            <Link className={`cursor-alias ${buttonStyle}`} key='resume' href='https://www.canva.com/design/DAFxvDRoFaY/LnAoxx9CURUUYoggEphxrA/edit' rel="noopener noreferrer" target="_blank">See Resume</Link>
+            <Link className={buttonStyle} href='/#contact' key='contact'>Contact Me</Link>
           </div>
           {/* image 1 */}
           <div className="z-1 relative hidden md:block">
@@ -60,3 +56,5 @@ function Landing() {
 }
 
 export default Landing;
+
+

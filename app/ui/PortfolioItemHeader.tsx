@@ -14,7 +14,12 @@ function PortfolioItemHeader({ title, dates }: { title: string, dates?: { start:
 
     return (
         <div className="font-mono m-0">
-            <div>{title} • {dates ? formatDateRange(dates) : 'Ongoing'}</div>
+            <div className='flex flex-col items-center md:flex-row'>
+                <div className='mr-2'>
+                    {title}:
+                </div>
+                <div>{dates ? formatDateRange(dates) : 'Ongoing'}</div>
+            </div>
         </div>
     );
 }

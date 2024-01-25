@@ -23,15 +23,12 @@ function ContactCard({ method }: { method: ContactMethod }) {
 
     const renderCardInner = () => {
         return (
-            <div className='h-52 w-80 shadow shadow-black border border-sky-400 flex items-center flex-col p-4 justify-center [&>*]:m-2'>
+            <div className='w-52 h-40 sm:h-52 sm:w-80 shadow shadow-black border border-sky-400 flex items-center flex-col p-4 justify-center [&>*]:m-2'>
                 <div>
                     <Image src={`/socials/${method.title}.png`} alt={`${method.title} icon`} width={70} height={70} />
                 </div>
-                <div>
+                <div className="text-center">
                     {method.detail}
-                </div>
-                <div>
-                    {method.resource}
                 </div>
             </div>
         )
@@ -42,7 +39,7 @@ function ContactCard({ method }: { method: ContactMethod }) {
             {method.resource.startsWith('http') ?
                 <Link href={method.resource} target="_blank"> {renderCardInner()} </Link>
                 :
-                <div onClick={handleClick}> {renderCardInner()} </div>
+                <div onClick={handleClick} className="cursor-copy"> {renderCardInner()} </div>
             }
 
         </>

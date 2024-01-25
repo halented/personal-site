@@ -5,7 +5,7 @@ import Portfolio from "../ui/siteSections/Portfolio";
 export default function Home() {
   return (
     <main>
-      <div className="mt-14">
+      <div className="mt-14 overflow-hidden">
         <Landing />
         <Portfolio />
         <Contact />
