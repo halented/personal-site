@@ -3,7 +3,7 @@ import { childContainerStyle } from '../../lib/styles'
 function Header({ title, emphasisWord, flexRight }: { title: string, emphasisWord: string, flexRight: boolean }) {
     return (
         <div className={`${childContainerStyle} ${flexRight ? 'flex-row-reverse' : ''}`}>
-            <div className="relative">
+            <div className="relative font-mono">
                 <div className="text-4xl h-14 flex items-center w-max">
                     {title}
                 </div>
