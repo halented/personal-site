@@ -1,20 +1,4 @@
-export type WorkType = {
-    img: string,
-    size: {
-        width: number,
-        height: number
-    }
-    description: string
-}
-
-export type PortfolioSectionType = {
-    title: string;
-    dates?: {
-        start: Date;
-        end?: Date;
-    },
-    works: WorkType[]
-}
+import { PortfolioSectionType, infoCardsDataType } from "./types";
 
 export const sections: PortfolioSectionType[] = [
     {
@@ -151,3 +135,17 @@ export const sections: PortfolioSectionType[] = [
 export const contactMethods = [{ title: 'github', detail: 'Poke around my personal projects!', resource: 'https://github.com/halented' }, { title: 'linkedin', detail: 'Connect with me!', resource: 'https://www.linkedin.com/in/halented/' }, { title: 'blog', detail: 'Check out my latest posts!', resource: 'https://www.dev.to/halented' }, { title: 'email', detail: 'Drop a message in my inbox!', resource: 'heyhalfriday@gmail.com' }, { title: 'phone', detail: 'Send me a text! Or call if you must.', resource: '206-551-5709' }];
 
 export const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
+
+
+export const infoCardsData: infoCardsDataType = {
+    'signupForm': `<div style="margin:5px;">- bullet point one <br/> - bullet point one </div>`,
+    'verificationForm': '<div style="margin:5px;">- bullet point one <br/> - bullet point one </div>',
+    'studentDashboard': '<div style="margin:5px;">- bullet point one <br/> - bullet point one </div>',
+    'textToSpeech': '<div style="margin:5px;">- bullet point one <br/> - bullet point one </div>',
+    'bugs': '<div style="margin:5px;">- bullet point one <br/> - bullet point one </div>',
+    'documentation': '<div style="margin:5px;">- bullet point one <br/> - bullet point one </div>',
+    'pluginShowcase': '<div style="margin:5px;">- bullet point one <br/> - bullet point one </div>',
+    'flatiron1': '<div style="margin:5px;">- bullet point one <br/> - bullet point one </div>',
+    'flatiron2': '<div style="margin:5px;">- bullet point one <br/> - bullet point one </div>',
+    'codeReview': '<div style="margin:5px;">- bullet point one <br/> - bullet point one </div>',
+}
