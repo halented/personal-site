@@ -138,14 +138,63 @@ export const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'Jul', 'Au
 
 
 export const infoCardsData: infoCardsDataType = {
-    'signupForm': `<div style="margin:5px;">- bullet point one <br/> - bullet point one </div>`,
-    'verificationForm': '<div style="margin:5px;">- bullet point one <br/> - bullet point one </div>',
-    'studentDashboard': '<div style="margin:5px;">- bullet point one <br/> - bullet point one </div>',
-    'textToSpeech': '<div style="margin:5px;">- bullet point one <br/> - bullet point one </div>',
-    'bugs': '<div style="margin:5px;">- bullet point one <br/> - bullet point one </div>',
-    'documentation': '<div style="margin:5px;">- bullet point one <br/> - bullet point one </div>',
-    'pluginShowcase': '<div style="margin:5px;">- bullet point one <br/> - bullet point one </div>',
-    'flatiron1': '<div style="margin:5px;">- bullet point one <br/> - bullet point one </div>',
-    'flatiron2': '<div style="margin:5px;">- bullet point one <br/> - bullet point one </div>',
-    'codeReview': '<div style="margin:5px;">- bullet point one <br/> - bullet point one </div>',
+    'signupForm':
+        `<div style="margin:5px;">
+        • Autocompletes school search with asynchronous db matching <br/>
+        • Branching form structure dynamically shows proper UI <br/>
+        • Custom style & icons for input fields, dropdowns <br/>
+        • Form data validations <br/>
+        • Play with this live on <a href="https://app.classkick.com/#/signup/choice" rel="noopener noreferrer" target="_blank" style="color:blue;cursor:pointer;">Classkick!</a> </div>`,
+    'verificationForm':
+        `<div style="margin:5px;overflow:scroll;">
+        • Integrates with maps<br/>
+        • Autocomplete searches for addresses<br/>
+        • Autofills existing address data if possible<br/>
+        • Custom error handling & messages<br/>
+        • Custom metrics functions monitor usage & abandon rates<br/>
+        • UI auto updates after form completes</div>`,
+    'studentDashboard':
+        `<div style="margin:5px;">
+        • Added nested folder structure allowing students to archive old assignments <br/>
+        • Added colorized folder indications for accesibility & ease of use  <br/>
+        • Allowed sorting by assignment name
+        </div>`,
+    'textToSpeech':
+        `<div style="margin:5px;">
+        • Implemented SpeechSynthesis from the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API" rel="noopener noreferrer" target="_blank" style="color:blue;cursor:pointer;">Web Speech API</a> <br/>
+        • Allows play & stop <br/>
+        • Allows users to toggle feature on/off<br/>
+        • Language determined by user browser language<br/>
+        • Play with this live on <a href="https://app.classkick.com/#" rel="noopener noreferrer" target="_blank" style="color:blue;cursor:pointer;">Classkick!</a> (To get to this feature, create a free teacher account and assignment then add a text box.)</div>`,
+    'bugs':
+        `<div style="margin:5px;">
+        • Solved large data loading issue by implementing pagination system on the assignment library<br/>
+        • Solved something else </div>`,
+    'documentation':
+        `<div style="margin:5px;">
+        • Wrote SDK documentation for Qualtrics products (Task workflow) <br/>
+        • Followed <a href="https://github.com/DavidAnson/markdownlint" rel="noopener noreferrer" target="_blank" style="color:blue;cursor:pointer;">markdownlint</a> guidelines <br/>
+        • Collaborated closely with team to provide snappy feedback updates and add/improve use case scenarios</div>`,
+    'pluginShowcase':
+        `<div style="margin:5px;">
+        • Task workflow built in React<br/>
+        • Used custom hooks <br/>
+        • Showcased every feature of Task workflow <br/>
+        • Dynamically rendered user data</div>`,
+    'flatiron1':
+        `<div style="margin:5px;">
+        • Taught basic JavaScript concepts including variable types, scope, data types and common methods (like Array methods or String methods), mental models<br/>
+        • Taught medium JavaScript concepts including closures, classes and inheritance, this, async behavior, IFFEs, DOM manipulation<br/>
+        • Taught basic React concepts including virtual DOM, functional components, state & props, JSX usage<br/>
+        • Taught medium React concepts including lifecycle methods, hooks & custom hooks, Context, Redux pattern, async behavior </div>`,
+    'flatiron2':
+        `<div style="margin:5px;">
+        • Taught algorithms by introducing concepts, then asking students to complete coding puzzles which could be done with those concepts <br/>
+        • For example: spent one lecture on recursion, then the next lecture working through the Nth Fibonacci Sequence problem <br/>
+        • Other concepts included use of stacks, sorting algorithms (insertion, bubble, selection), use of trees and nodes, breadth first vs depth first searching </div>`,
+    'codeReview':
+        `<div style="margin:5px;">
+        • Taught Git - repo creation, branching, merging, PR creation, reverting, rebasing, and whatever else came up really<br/>
+        • Dove into code submission PR's and provided high level detail feedback for code improvement on projects written in JavaScript, React, and Ruby on Rails<br/>
+        • Provided feedback in various formats; 1:1 meetings, written documents, PR comments. Required a lot of flexibility in my communication style to help material click for students </div>`,
 }

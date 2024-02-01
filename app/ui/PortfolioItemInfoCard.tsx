@@ -7,9 +7,9 @@ function PortfolioItemInfoCard({ keyName, handleExitClick }: { keyName: string, 
 
     return (
         <div>
-            <div className={portfolioCardStyle}>
-                <span className="text-xl cursor-pointer flex justify-end p-2" onClick={handleExitClick}>✖</span>
-                <TextComponent innerHTML={infoCardsData[keyName]} />
+            <div className={portfolioCardStyle + " overflow-scroll pl-3 pt-0"}>
+                <span className="text-xl cursor-pointer flex p-2 hover:text-sky-400 sticky bg-white bg-opacity-85 top-0" onClick={handleExitClick}>⏎</span>
+                <TextComponent innerHTML={infoCardsData[keyName]} style="text-left"/>
             </div>
         </div>
     );

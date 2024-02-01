@@ -1,6 +1,6 @@
-function TextComponent({ innerHTML }: { innerHTML: string }) {
+function TextComponent({ innerHTML, style }: { innerHTML: string, style?: string }) {
     return (
-        <div className="text-center" dangerouslySetInnerHTML={{ __html: innerHTML }}>
+        <div className={style} dangerouslySetInnerHTML={{ __html: innerHTML }}>
         </div>
     );
 }
