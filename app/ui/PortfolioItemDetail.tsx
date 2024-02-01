@@ -1,15 +1,35 @@
-import { WorkType } from "../lib/data";
+'use client';
+import { WorkType } from "../lib/types";
 import Image from "next/image";
 import { getImageSrc } from "../lib/helpers";
+import { useState } from "react";
+import PortfolioItemInfoCard from "./PortfolioItemInfoCard";
+import TextComponent from "./common/TextComponent";
+import { portfolioCardStyle } from "../lib/styles";
 
 function PortfolioItemDetail({ work }: { work: WorkType }) {
+  const [showInfo, setShowInfo] = useState(false);
+
+  const handleCardClick = () => {
+    showInfo ? null : setShowInfo(!showInfo);
+  }
+
+  const handleExitClick = () => {
+    setShowInfo(!showInfo);
+  }
+
   return (
-    <div className="m-1 p-1 flex flex-col min-w-64 max-h-96 md:min-w-80 md:max-h-max">
-      <div>
-        <Image src={getImageSrc(work.img)} width={work.size.width} height={work.size.height} alt={`${work.description}`} className="m-1 p-1 min-h-64 w-auto md:min-h-80 object-cover border border-sky-200 rounded-md max-h-80" quality={100} />
-      </div>
-      <div className="text-center" dangerouslySetInnerHTML={{ __html: work.description }}>
-      </div>
+    <div className="m-1 p-1 flex flex-col min-w-64 max-w-64 max-h-96 md:min-w-80 md:max-h-max" onClick={handleCardClick}>
+      <>
+        <div>
+          {showInfo ?
+            <PortfolioItemInfoCard keyName={work.img} handleExitClick={handleExitClick} />
+            :
+            <Image src={getImageSrc(work.img)} width={work.size.width} height={work.size.height} alt={`${work.description}`} className={portfolioCardStyle + ' object-cover cursor-pointer'} quality={100} />
+          }
+        </div>
+        <TextComponent innerHTML={work.description} style='text-center'/>
+      </>
     </div>
   );
 }
