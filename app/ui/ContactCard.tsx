@@ -23,7 +23,7 @@ function ContactCard({ method }: { method: ContactMethod }) {
 
     const renderCardInner = () => {
         return (
-            <div className='w-52 h-40 sm:h-52 sm:w-80 shadow shadow-black border border-sky-400 flex items-center flex-col p-4 justify-center [&>*]:m-2'>
+            <div className='w-52 h-40 sm:h-52 sm:w-80 shadow shadow-black border border-sky-400 flex items-center flex-col p-4 justify-center [&>*]:m-2 rounded-md'>
                 <div>
                     <Image src={`/socials/${method.title}.png`} alt={`${method.title} icon`} width={70} height={70} />
                 </div>

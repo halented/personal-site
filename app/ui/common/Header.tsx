@@ -4,7 +4,7 @@ function Header({ title, emphasisWord, flexRight }: { title: string, emphasisWor
     return (
         <div className={`${childContainerStyle} ${flexRight ? 'flex-row-reverse' : ''}`}>
             <div className="relative font-mono">
-                <div className="text-4xl h-14 flex items-center w-max">
+                <div className="text-3xl md:text-4xl h-14 flex items-center w-max">
                     {title}
                 </div>
                 <div className={`absolute top-0 -z-1 text-6xl md:text-7xl opacity-10 font-bold ${flexRight ? 'right-2' : ''}`}>

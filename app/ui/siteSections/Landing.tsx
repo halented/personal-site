@@ -18,7 +18,7 @@ function Landing() {
 
   return (
     <>
-      <Divider style='ml-64' />
+      <Divider style='mt-14' id='home' />
       <div className="flex flex-col items-center">
         <div className={`${childContainerStyle}`}>
           <div className="text-2xl font-mono">Hello,</div>

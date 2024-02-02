@@ -7,10 +7,10 @@ import { sections } from '../../lib/data';
 function Portfolio() {
 
     return (
-        <div id='portfolio'>
-            <Divider style='mr-64' />
+        <div>
+            <Divider style='justify-center' id='portfolio'/>
             <div className="flex flex-col items-center">
-                <Header title='Portfolio' emphasisWord='PORTFOLIO' flexRight={true} />
+                <Header title='Portfolio' emphasisWord='PORTFOLIO' flexRight={false} />
                 <div className={`${childContainerStyle} flex-col items-center`}>
                     {sections.map(s => <PortfolioItem section={s} key={s.title}/>)}
                 </div>

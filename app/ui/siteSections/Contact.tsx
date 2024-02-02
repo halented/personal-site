@@ -7,8 +7,8 @@ import { contactMethods } from "@/app/lib/data";
 
 export default function Contact() {
     return (
-        <div id='contact'>
-            <Divider style='ml-64' />
+        <div>
+            <Divider style='justify-end' id='contact'/>
             <div className="flex flex-col items-center">
                 <Header title="Contact" emphasisWord="CONTACT" flexRight={false} />
                 <div className={`flex flex-col sm:flex-row ${childContainerStyle} justify-evenly flex-wrap items-center`}>
