@@ -5,7 +5,7 @@ import Portfolio from "../ui/siteSections/Portfolio";
 export default function Home() {
   return (
     <main>
-      <div className="mt-14 overflow-hidden">
+      <div className="overflow-hidden">
         <Landing />
         <Portfolio />
         <Contact />
@@ -13,3 +13,5 @@ export default function Home() {
     </main>
   )
 }
+
+// put this back 
