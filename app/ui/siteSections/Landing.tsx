@@ -29,7 +29,7 @@ function Landing() {
         </div>
         <div className={`${childContainerStyle}`}>
           <div className="flex flex-row h-fit">
-            <Link className={`cursor-alias ${buttonStyle}`} key='resume' href='https://www.canva.com/design/DAFxvDRoFaY/LnAoxx9CURUUYoggEphxrA/edit' rel="noopener noreferrer" target="_blank">See Resume</Link>
+            <Link className={`cursor-alias ${buttonStyle}`} key='resume' href='https://www.canva.com/design/DAFvj4cE_ro/qFwN1uddGXTbTJkKMqIntw/edit' rel="noopener noreferrer" target="_blank">See Resume</Link>
             <Link className={buttonStyle} href='/#contact' key='contact'>Contact Me</Link>
           </div>
           {/* image 1 */}
