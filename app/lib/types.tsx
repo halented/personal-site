@@ -20,3 +20,8 @@ export type PortfolioSectionType = {
 export type infoCardsDataType = {
     [key: string]: string
 }
+
+export type TimerType = {
+    title: string;
+    length: number;
+}
