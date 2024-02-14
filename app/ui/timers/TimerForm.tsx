@@ -1,4 +1,4 @@
-import { TimerType } from '@/app/lib/types';
+import { RawTimerType, TimerType } from '@/app/lib/types';
 
 const formFieldStyle = 'border border-teal-400 bg-gray-800 text-white w-32 text-center rounded-md'
 
@@ -11,7 +11,9 @@ function TimerForm({ updateTimers }: { updateTimers: (ev: TimerType) => void }) 
         };
         const title = target.title.value;
         const length = parseInt(target.length.value);
-        const timer: TimerType = { title, length };
+        const tempTimer: RawTimerType = { title, length, fill: 1 };
+        // POST request here, which should return with an id
+        const timer: TimerType = {...tempTimer, id: '11111'}
         updateTimers(timer);
     }
     return (

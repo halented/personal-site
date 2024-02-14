@@ -3,12 +3,17 @@ import { useState } from "react";
 import TimerForm from "@/app/ui/timers/TimerForm";
 import { TimerType } from "../lib/types";
 import Timer from "../ui/timers/Timer";
+import { fetchTimers } from "../lib/databaseActions";
 
+// needs to be async 
 function Timers() {
     const [timers, setTimers] = useState<TimerType[]>([]);
     const updateTimers = (timer: TimerType) => {
         setTimers([...timers, timer])
     };
+
+    // const timerz = await fetchTimers();
+    // console.log('timers from db: ', timerz);
 
     const deleteTimer = (timer: TimerType) => {
         const newTimers = timers.slice();
