@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import TimerForm from "../ui/timers/TimerForm";
+import TimerForm from "@/app/ui/timers/TimerForm";
 import { TimerType } from "../lib/types";
 import Timer from "../ui/timers/Timer";
 
