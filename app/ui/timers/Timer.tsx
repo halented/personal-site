@@ -6,23 +6,41 @@ const activeSegment = inactiveSegment + ' bg-teal-400';
 const counterButton = 'border border-teal-400 rounded-full h-6 w-6 text-center leading-5 hover:bg-gray-600 hover:cursor-pointer'
 
 function Timer({ timer }: { timer: TimerType }) {
+    const [fill, setFill] = useState<number>(1)
+    const [error, setError] = useState(false);
+
     const handleClick = (increase: boolean) => {
         if (increase) {
-            fill < timer.length ? setFill(fill + 1) : console.log('pulse element');
+            fill < timer.length ? setFill(fill + 1) : showError();
         }
         else {
-            fill > 0 ? setFill(fill - 1) : console.log('negative pulse');
+            fill > 0 ? setFill(fill - 1) : showError();
         }
     };
-    const [fill, setFill] = useState<number>(1)
+
+    const showError = () => {
+        setError(true);
+        setTimeout(() => {
+            removeError()
+        }, 1800);
+    }
+
+    const removeError = () => {
+        setError(false);
+    }
 
     const renderSegments = () => {
         return Array.from(new Array(timer.length)).map((x, i) => <div className={i < (timer.length - fill) ? inactiveSegment : activeSegment} key={i}></div>)
     }
 
+    const bubbleBackground = () => {
+        return error ? 'bg-red-600' : 'bg-black';
+    }
+
     return (
-        <div className="flex border-x-2 border-violet-600 rounded-3xl m-2">
-            <div className="flex flex-col items-center m-2 justify-center px-1">
+        <div className="flex border-x-2 border-violet-600 rounded-3xl m-2 px-1">
+            <div className={"h-2 w-2 rounded-full m-2 animate-pulse " + bubbleBackground()}></div>
+            <div className="flex flex-col items-center m-2 justify-center">
                 <div className="text-lg">{timer.title}</div>
                 <div className="flex flex-col [&>*]:mb-1">
                     {renderSegments()}

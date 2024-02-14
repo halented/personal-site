@@ -1,5 +1,7 @@
 import { TimerType } from '@/app/lib/types';
 
+const formFieldStyle = 'border border-teal-400 bg-gray-800 text-white w-32 text-center rounded-md'
+
 function TimerForm({ updateTimers }: { updateTimers: (ev: TimerType) => void }) {
     const handleEvent = (ev: React.SyntheticEvent) => {
         ev.preventDefault();
@@ -13,11 +15,11 @@ function TimerForm({ updateTimers }: { updateTimers: (ev: TimerType) => void }) 
         updateTimers(timer);
     }
     return (
-        <form className='flex flex-col items-center' onSubmit={(ev: React.SyntheticEvent) => handleEvent(ev)}>
+        <form className='flex flex-col items-center' onSubmit={handleEvent}>
             <label>Title</label>
-            <input name='title' className='border border-teal-400 bg-gray-400 text-black'></input>
+            <input required name='title' className={formFieldStyle}></input>
             <label>Length</label>
-            <input name='length' type='number' className='border border-teal-400 bg-gray-400 text-black'></input>
+            <input required min='1' max='20' name='length' type='number' className={formFieldStyle}></input>
             <button type='submit' className='hover:bg-gray-600 rounded-md m-2 p-2 shadow shadow-black border border-teal-400 bg-gray-800'>Create</button>
         </form>
     );
