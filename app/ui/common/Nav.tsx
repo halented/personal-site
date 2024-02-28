@@ -8,7 +8,7 @@ function Nav() {
             <div className={'font-mono text-6xl ' + styles.gradient}>HF</div>
             <div className='self-center'>
             {navLinks.map(x => {
-                return <CustomLink key={x} title={x} />
+                return <CustomLink key={`customLink ${x}`} title={x} />
             })}
             </div>
         </div>

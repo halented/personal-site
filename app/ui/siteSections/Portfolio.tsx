@@ -12,7 +12,7 @@ function Portfolio() {
             <div className="flex flex-col items-center">
                 <Header title='Portfolio' emphasisWord='PORTFOLIO' flexRight={false} />
                 <div className={`${childContainerStyle} flex-col items-center`}>
-                    {sections.map(s => <PortfolioItem section={s} key={s.title}/>)}
+                    {sections.map(s => <PortfolioItem section={s} key={`portfolio ${s.title}`}/>)}
                 </div>
             </div>
         </div>

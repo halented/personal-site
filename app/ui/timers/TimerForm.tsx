@@ -12,12 +12,13 @@ function TimerForm({ updateTimers }: { updateTimers: (ev: TimerType) => void }) 
         const title = target.title.value;
         const length = parseInt(target.length.value);
         const tempTimer: RawTimerType = { title, length, fill: 1 };
-        // POST request here, which should return with an id
+        // POST request here, which should return with an id. mock return below
         const timer: TimerType = {...tempTimer, id: '11111'}
         updateTimers(timer);
     }
+    // onSubmit={handleEvent}
     return (
-        <form className='flex flex-col items-center' onSubmit={handleEvent}>
+        <form className='flex flex-col items-center' >
             <label>Title</label>
             <input required name='title' className={formFieldStyle}></input>
             <label>Length</label>

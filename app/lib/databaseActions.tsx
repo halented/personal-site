@@ -1,3 +1,4 @@
+'use server'
 import { unstable_noStore as noStore } from 'next/cache';
 import { sql } from '@vercel/postgres';
 import { TimerType } from './types';
@@ -11,6 +12,6 @@ export async function fetchTimers() {
         return data.rows;
     } catch (error) {
         console.error('Database Error:', error);
-        throw new Error('Failed to fetch revenue data.');
+        throw new Error('Failed to fetch timer data.');
     }
 }
