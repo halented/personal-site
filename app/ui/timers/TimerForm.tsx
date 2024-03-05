@@ -1,24 +1,19 @@
+'use client'
+import { postTimer } from '@/app/lib/databaseActions';
 import { RawTimerType, TimerType } from '@/app/lib/types';
+import { useFormState } from "react-dom";
+
 
 const formFieldStyle = 'border border-teal-400 bg-gray-800 text-white w-32 text-center rounded-md'
 
-function TimerForm({ updateTimers }: { updateTimers: (ev: TimerType) => void }) {
-    const handleEvent = (ev: React.SyntheticEvent) => {
-        ev.preventDefault();
-        const target = ev.target as typeof ev.target & {
-            title: { value: string };
-            length: { value: string };
-        };
-        const title = target.title.value;
-        const length = parseInt(target.length.value);
-        const tempTimer: RawTimerType = { title, length, fill: 1 };
-        // POST request here, which should return with an id. mock return below
-        const timer: TimerType = {...tempTimer, id: '11111'}
-        updateTimers(timer);
-    }
-    // onSubmit={handleEvent}
+function TimerForm() {
+    const initialState = {
+        message: 'pending'
+    };
+    const [state, formAction] = useFormState(postTimer, initialState);
+
     return (
-        <form className='flex flex-col items-center' >
+        <form className='flex flex-col items-center' action={formAction}>
             <label>Title</label>
             <input required name='title' className={formFieldStyle}></input>
             <label>Length</label>
