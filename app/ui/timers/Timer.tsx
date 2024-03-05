@@ -1,6 +1,7 @@
 'use client'
 import { TimerType } from "@/app/lib/types";
 import { useState } from "react";
+import { deleteTimer } from "@/app/lib/databaseActions";
 import toast from 'react-simple-toasts';
 import './timer.css'
 
@@ -9,7 +10,6 @@ const activeSegment = inactiveSegment + ' bg-teal-400';
 const counterButton = 'border border-teal-400 rounded-full h-6 w-6 text-center leading-5 hover:bg-gray-600 hover:cursor-pointer'
 
 function Timer({ timer }: { timer: TimerType }) {
-    // , deleteTimer: (timer: TimerType) => void 
     const [fill, setFill] = useState<number>(1)
     const [error, setError] = useState(false);
     const [del, setDel] = useState(false);
@@ -44,8 +44,8 @@ function Timer({ timer }: { timer: TimerType }) {
 
     const confirmDelete = () => {
         if (del) {
-            // deleteTimer(timer);
-            console.log('delete timer');
+            deleteTimer(timer.id);
+            console.log('delete timer: ', timer);
         }
         else {
             toast('Click X again to delete', { theme: 'tealToast' })

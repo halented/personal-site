@@ -16,7 +16,7 @@ export async function fetchTimers() {
     }
 }
 
-export async function postTimer(prevState: { message: string; }, formData: FormData,) {
+export async function postTimer(prevState: { message: string; }, formData: FormData) {
     // temporarily post all timers to one hardcoded  user until we approach auth
     const postData = { userId: '4f690fd8-2392-4857-910a-e8208d7a407e', title: formData.get('title') as string, length: formData.get('length') as string, fill: 0 }
 
@@ -33,5 +33,21 @@ export async function postTimer(prevState: { message: string; }, formData: FormD
     } catch (error) {
         console.error('Database Error:', error);
         throw new Error('Failed to post new timer.');
+    }
+}
+
+export async function deleteTimer(timerId: string) {
+    try {
+        await sql`
+            DELETE FROM timers WHERE id = ${timerId}
+        `;
+
+        revalidatePath("/timers");
+
+        return { message: 'success' };
+    }
+    catch (error) {
+        console.error('Database Error:', error);
+        throw new Error(`Failed to delete timer ${timerId}.`);
     }
 }
