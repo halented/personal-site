@@ -34,14 +34,14 @@ function CustomLink({ title, key }: { title: string, key: string }) {
 
     if (href.startsWith('/')) {
         return (
-            <Link key={title} href={href} className={clsx(navButtonStyle, { 'text-sky-300': isActive()})}>
+            <Link key={`navlink ${title}`} href={href} className={clsx(navButtonStyle, { 'text-sky-300': isActive()})}>
                 {title}
             </Link>
         );
     }
     else {
         return (
-            <Link key={title} href={href} rel="noopener noreferrer" target="_blank" className={`cursor-alias ${navButtonStyle}`}>
+            <Link key={`navlink ${title}`} href={href} rel="noopener noreferrer" target="_blank" className={`cursor-alias ${navButtonStyle}`}>
                 {title}
             </Link>
         )

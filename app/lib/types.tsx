@@ -20,3 +20,13 @@ export type PortfolioSectionType = {
 export type infoCardsDataType = {
     [key: string]: string
 }
+
+export type RawTimerType = {
+    title: string;
+    length: number;
+    fill: number;
+}
+
+export type TimerType = RawTimerType & {
+    id: string;
+}

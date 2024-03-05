@@ -6,15 +6,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seed": "node -r dotenv/config ./scripts/seed.js"
   },
   "dependencies": {
+    "@vercel/postgres": "^0.7.2",
+    "bcrypt": "^5.1.1",
     "clsx": "^2.1.0",
+    "dotenv": "^16.4.4",
     "next": "14.0.4",
     "nextjs-current-url": "^1.0.3",
     "react": "^18",
     "react-dom": "^18",
-    "react-simple-toasts": "^5.10.0"
+    "react-simple-toasts": "^5.10.0",
+    "vercel": "^33.5.2"
   },
   "devDependencies": {
     "@types/node": "^20",

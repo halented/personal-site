@@ -6,7 +6,7 @@ function PortfolioItemBody({ title, works }: { title: string, works: WorkType[]}
 
     return (
         <div className="w-full p-4 flex flex-nowrap overflow-x-scroll" >
-            {works.map(w => <PortfolioItemDetail key={title} work={w} />)}
+            {works.map(w => <PortfolioItemDetail key={w.img} work={w} />)}
         </div>
     );
 }

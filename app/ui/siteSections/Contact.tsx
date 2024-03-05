@@ -12,7 +12,7 @@ export default function Contact() {
             <div className="flex flex-col items-center">
                 <Header title="Contact" emphasisWord="CONTACT" flexRight={false} />
                 <div className={`flex flex-col sm:flex-row ${childContainerStyle} justify-evenly flex-wrap items-center`}>
-                    {contactMethods.map(method => <ContactCard method={method} key={method.title} />)}
+                    {contactMethods.map(method => <ContactCard method={method} key={`contact ${method.title}`} />)}
                 </div>
             </div>
         </div>
