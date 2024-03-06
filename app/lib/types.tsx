@@ -30,3 +30,7 @@ export type RawTimerType = {
 export type TimerType = RawTimerType & {
     id: string;
 }
+
+export type HttpTimerType = RawTimerType & {
+    userId: string;
+}

@@ -6,10 +6,17 @@ import { useFormState } from "react-dom";
 const formFieldStyle = 'border border-teal-400 bg-gray-800 text-white w-32 text-center rounded-md'
 
 function TimerForm() {
+    const beginPostTimer = async (prevState: { message: string; }, formData: FormData) => {
+        const postData = { userId: '', title: formData.get('title') as string, length: parseInt(formData.get('length') as string), fill: 1 }
+        const result = await postTimer(postData);
+        return result
+    }
+
     const initialState = {
         message: 'pending'
     };
-    const [state, formAction] = useFormState(postTimer, initialState);
+
+    const [state, formAction] = useFormState(beginPostTimer, initialState);
 
     return (
         <form className='flex flex-col items-center' action={formAction}>
