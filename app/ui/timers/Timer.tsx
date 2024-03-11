@@ -1,7 +1,8 @@
 'use client'
 import { TimerType } from "@/app/lib/types";
 import { useState } from "react";
-import { deleteTimer } from "@/app/lib/databaseActions";
+import { useFormState } from "react-dom";
+import { deleteTimer, updateTimer } from "@/app/lib/databaseActions";
 import toast from 'react-simple-toasts';
 import './timer.css'
 
@@ -10,18 +11,28 @@ const activeSegment = inactiveSegment + ' bg-teal-400';
 const counterButton = 'border border-teal-400 rounded-full h-6 w-6 text-center leading-5 hover:bg-gray-600 hover:cursor-pointer'
 
 function Timer({ timer }: { timer: TimerType }) {
-    const [fill, setFill] = useState<number>(1)
     const [error, setError] = useState(false);
     const [del, setDel] = useState(false);
 
-    const handleClick = (increase: boolean) => {
-        if (increase) {
-            fill < timer.length ? setFill(fill + 1) : showError();
+    const updateFill = async (previousState: { fill: number }, formData: FormData) => {     
+        if ((formData.get('+') && previousState.fill < timer.length) || (formData.get('-') && previousState.fill > 0)) {
+            // if change is valid
+            const newFill = formData.get('+') ? previousState.fill + 1 : previousState.fill - 1;
+            await updateTimer({ ...timer, fill: newFill });
+            return { fill: newFill }
         }
         else {
-            fill > 0 ? setFill(fill - 1) : showError();
+            showError();
+            return { fill: previousState.fill }
         }
+    }
+
+    const initialState = {
+        fill: timer.fill
     };
+
+    const [state, fillAction] = useFormState(updateFill, initialState);
+
 
     const showError = () => {
         setError(true);
@@ -35,7 +46,7 @@ function Timer({ timer }: { timer: TimerType }) {
     }
 
     const renderSegments = () => {
-        return Array.from(new Array(timer.length)).map((x, i) => <div className={i < (timer.length - fill) ? inactiveSegment : activeSegment} key={i}></div>)
+        return Array.from(new Array(timer.length)).map((x, i) => <div className={i < (timer.length - state.fill) ? inactiveSegment : activeSegment} key={i}></div>)
     }
 
     const bubbleBackground = () => {
@@ -72,8 +83,12 @@ function Timer({ timer }: { timer: TimerType }) {
                 </div>
             </div>
             <div className="flex flex-col justify-center [&>*]:m-1">
-                <div className={counterButton} onClick={() => handleClick(true)}>+</div>
-                <div className={counterButton} onClick={() => handleClick(false)}>-</div>
+                <form action={fillAction}>
+                    <button className={counterButton} type="submit" value="submit" name='+'>+</button>
+                </form>
+                <form action={fillAction}>
+                    <button className={counterButton} type="submit" value="submit" name='-'>-</button>
+                </form>
                 <div className={counterButton + deleteColor()} onClick={confirmDelete}>x</div>
             </div>
         </div>
