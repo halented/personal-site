@@ -1,9 +1,7 @@
 'use client'
 import { postTimer } from '@/app/lib/databaseActions';
+import { formFieldStyle } from '@/app/lib/styles';
 import { useFormState } from "react-dom";
-
-
-const formFieldStyle = 'border border-teal-400 bg-gray-800 text-white w-32 text-center rounded-md'
 
 function TimerForm() {
     const beginPostTimer = async (prevState: { message: string; }, formData: FormData) => {

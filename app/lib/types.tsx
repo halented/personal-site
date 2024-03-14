@@ -34,3 +34,9 @@ export type TimerType = RawTimerType & {
 export type HttpTimerType = RawTimerType & {
     userId: string;
 }
+
+export type User = {
+    id: string;
+    username: string;
+    password: string;
+  };

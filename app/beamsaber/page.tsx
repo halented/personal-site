@@ -1,8 +1,10 @@
+import LoginForm from "../ui/login/LoginForm";
+
 export default function Page() {
 
     return (
         <div className="h-full">
-            THIS WILL BE THE LOGIN PAGE
+            <LoginForm />
         </div>
     );
 }
