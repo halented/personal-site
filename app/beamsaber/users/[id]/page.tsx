@@ -1,9 +1,9 @@
 import TimerForm from "@/app/ui/timers/TimerForm";
-import Timer from "../ui/timers/Timer";
-import { fetchTimers } from "../lib/databaseActions";
+import Timer from "@/app/ui/timers/Timer";
+import { fetchTimers } from "@/app/lib/databaseActions";
 
 
-export default async function Timers() {
+export default async function Page() {
     let timers = await fetchTimers();
     timers = timers.sort((a,b) => {
         if (a.title > b.title) {
