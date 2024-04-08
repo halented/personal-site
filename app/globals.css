@@ -3,7 +3,12 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-      @apply scroll-smooth;
-    }
+  html {
+    @apply scroll-smooth;
   }
+
+  body {
+    overflow: auto;
+    height: 100vh;
+  }
+}

@@ -6,9 +6,9 @@ import { deleteTimer, updateTimer } from "@/app/lib/databaseActions";
 import toast from 'react-simple-toasts';
 import './timer.css'
 
-const inactiveSegment = 'h-4 w-24 border-teal-400 border';
-const activeSegment = inactiveSegment + ' bg-teal-400';
-const counterButton = 'border border-teal-400 rounded-full h-6 w-6 text-center leading-5 hover:bg-gray-600 hover:cursor-pointer'
+const inactiveSegment = 'h-4 w-24 border-teal border';
+const activeSegment = inactiveSegment + ' bg-teal';
+const counterButton = 'border border-teal rounded-full h-6 w-6 text-center leading-5 hover:bg-gray hover:cursor-pointer'
 
 function Timer({ timer }: { timer: TimerType }) {
     const [error, setError] = useState(false);
@@ -50,7 +50,7 @@ function Timer({ timer }: { timer: TimerType }) {
     }
 
     const bubbleBackground = () => {
-        return error ? 'bg-red-600' : 'bg-black';
+        return error ? 'bg-primaryRed' : 'bg-black';
     }
 
     const confirmDelete = () => {
@@ -65,7 +65,7 @@ function Timer({ timer }: { timer: TimerType }) {
         }
     }
     const deleteColor = () => {
-        return del ? ' bg-red-300 text-black hover:bg-red-400' : ''
+        return del ? ' bg-lightPrimaryRed text-black hover:bg-medPrimaryRed' : ''
     }
     const resetDeleteConfirm = () => {
         setTimeout(() => {
@@ -74,7 +74,7 @@ function Timer({ timer }: { timer: TimerType }) {
     }
 
     return (
-        <div className="flex border-x-2 border-violet-600 rounded-3xl m-2 px-1">
+        <div className="flex border-x-2 border-violet rounded-3xl m-2 px-1">
             <div className={"h-2 w-2 rounded-full m-2 animate-pulse " + bubbleBackground()}></div>
             <div className="flex flex-col items-center m-2 justify-center">
                 <div className="text-lg">{timer.title}</div>
