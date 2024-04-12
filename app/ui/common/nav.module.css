@@ -5,3 +5,14 @@
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
 }
+
+.surpriseGradient {
+    background-image: linear-gradient(45deg, #747444, #A02424);
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+/*  green: #747444
+ blue: #40545C */
