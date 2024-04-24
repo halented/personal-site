@@ -30,6 +30,11 @@ const config: Config = {
       violet: '#7c3aed',
       white: '#FFFFFF'
     },
+    maxWidth: {
+      '7/10': '70%',
+      '4/5': '80%',
+      'full': '100%',
+    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

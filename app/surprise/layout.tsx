@@ -7,12 +7,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className='surprise-container h-full overflow-auto'>
             <div>{children}</div>
             <Image
-                                src={grass}
-                                alt="clickable image"
-                                className="sticky bottom-0 w-full pointer-events-none"
-                                width={300}
-                                height={100}
-                            />
+                src={grass}
+                alt="clickable image"
+                className="sticky bottom-0 w-full pointer-events-none"
+                width={300}
+                height={100}
+            />
         </div>
     );
 }
