@@ -1,7 +1,8 @@
+import { surprisePageContainer } from "@/app/lib/styles";
 
 function Page() {
     return (
-        <div className='flex flex-col p-8 text-center'>
+        <div className={surprisePageContainer}>
             gallery
         </div>
     );

@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 import Link from 'next/link';
-import AFheader from '@/app/assets/surprise/landing/AFheader.png'
+import { surprisePageContainer } from "../lib/styles";
 import story from '@/app/assets/surprise/landing/story.png';
 import gallery from '@/app/assets/surprise/landing/gallery.png';
 import playlist from '@/app/assets/surprise/landing/playlist.png';
@@ -21,7 +21,7 @@ const linkImage = 'hover:opacity-80 max-w-7/10 md:max-w-full'
 function Page() {
     return (
 
-        <div className='flex flex-col p-8 text-center bg-gradient-to-b from-cyan-500 to-blue-500'>
+        <div className={surprisePageContainer}>
             {/* story, gallery links */}
             <div className='flex flex-col self-center md:flex-row justify-center'>
                 <Link href='/surprise/story'>

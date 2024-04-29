@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styles from './nav.module.css'
 // const navLinks = ['story', 'gallery', 'registry', 'playlist', 'us']
 import Image from 'next/image';
-import story from '@/app/assets/surprise/landing/story.png';
+import back from '@/app/assets/surprise/landing/back.png';
 
 function SurpriseNav() {
     return (
@@ -11,11 +11,11 @@ function SurpriseNav() {
                 <Link href='/surprise'>
                     <div>
                         <Image
-                            src={story}
-                            alt="clickable image"
+                            src={back}
+                            alt="left point arrow (back button)"
                             className='hover:opacity-80'
-                            width={100}
-                            height={100}
+                            width={50}
+                            height={50}
                         />
                     </div>
                 </Link>
