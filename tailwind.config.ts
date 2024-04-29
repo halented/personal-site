@@ -31,6 +31,7 @@ const config: Config = {
       white: '#FFFFFF'
     },
     maxWidth: {
+      '1/3': '33%',
       '7/10': '70%',
       '4/5': '80%',
       'full': '100%',

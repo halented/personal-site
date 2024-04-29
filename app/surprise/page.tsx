@@ -22,9 +22,6 @@ function Page() {
     return (
 
         <div className='flex flex-col p-8 text-center bg-gradient-to-b from-cyan-500 to-blue-500'>
-            <div className='flex self-center justify-center'>
-                <Image src={AFheader} alt='Hal facing the camera, outside at a park with sunglasses and a backwards hat on, smiling slightly.' width={783} height={474} style={{maxWidth: '80%'}} priority={true}></Image>
-            </div>
             {/* story, gallery links */}
             <div className='flex flex-col self-center md:flex-row justify-center'>
                 <Link href='/surprise/story'>
