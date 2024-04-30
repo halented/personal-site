@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { surprisePageContainer } from "@/app/lib/styles";
 import galleryHeader from '@/app/assets/surprise/landing/galleryHeader.png';
+import { Carousel } from "@/app/ui/surprise/Carousel";
 
 function Page() {
     return (
@@ -11,7 +12,7 @@ function Page() {
                 width={300}
                 height={100}
             />
-            <div></div>
+            <Carousel />
         </div>
     );
 }
