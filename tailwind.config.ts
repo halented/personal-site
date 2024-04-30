@@ -41,6 +41,11 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        "grass": "url('/grass.png')",
+      },
+      backgroundSize: {
+        '3/10': '30%',
+        'contain': 'contain',
       },
       cursor: {
         'copy': 'url(/copy.png), pointer',
