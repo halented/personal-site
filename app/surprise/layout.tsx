@@ -10,7 +10,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </div>
             <div>{children}</div>
             {/* grass div below */}
-            <div className="bg-repeat-x bg-grass bg-contain min-w-full min-h-20 absolute bottom-0 md:min-h-40">           
+            <div className="bg-repeat-x bg-grass bg-contain min-w-full min-h-20 absolute bottom-0 md:min-h-40 pointer-events-none">           
             </div>
         </div>
     );

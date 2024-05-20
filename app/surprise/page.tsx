@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 import Link from 'next/link';
-import { surprisePageContainer } from "../lib/styles";
+import { surpriseLandingPageContainer } from "../lib/styles";
 import story from '@/app/assets/surprise/landing/story.png';
 import gallery from '@/app/assets/surprise/landing/gallery.png';
 import playlist from '@/app/assets/surprise/landing/playlist.png';
@@ -21,9 +21,9 @@ const linkImage = 'hover:opacity-80 max-w-7/10 md:max-w-full'
 function Page() {
     return (
 
-        <div className={surprisePageContainer}>
+        <div className={surpriseLandingPageContainer}>
             {/* story, gallery links */}
-            <div className='flex flex-col self-center md:flex-row justify-center'>
+            <div className='flex flex-col self-center justify-center'>
                 <Link href='/surprise/story'>
                     <div className={imageContainer}>
                         <Image
@@ -35,20 +35,6 @@ function Page() {
                         />
                     </div>
                 </Link>
-                <Link href='/surprise/gallery'>
-                    <div className={imageContainer}>
-                        <Image
-                            src={gallery}
-                            alt="clickable image"
-                            className={linkImage}
-                            width={300}
-                            height={100}
-                        />
-                    </div>
-                </Link>
-            </div>
-            {/* playlist, registry, proposal links */}
-            <div className='flex flex-col self-center md:flex-row justify-center'>
                 <div className='flex flex-col self-center'>
                     <Link href='/surprise/playlist'>
                         <div className={imageContainer}>
@@ -73,6 +59,20 @@ function Page() {
                         </div>
                     </Link>
                 </div>
+            </div>
+            {/* playlist, registry, proposal links */}
+            <div className='flex flex-col self-center justify-center'>
+                <Link href='/surprise/gallery'>
+                    <div className={imageContainer}>
+                        <Image
+                            src={gallery}
+                            alt="clickable image"
+                            className={linkImage}
+                            width={300}
+                            height={100}
+                        />
+                    </div>
+                </Link>
                 <Link href='/surprise/us'>
                     <div className={imageContainer}>
                         <Image
