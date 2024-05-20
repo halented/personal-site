@@ -1,6 +1,9 @@
+import SurpriseNav from '@/app/ui/common/SurpriseNav';
+
 export default function Layout({ children }: { children: React.ReactNode }) {
     return (
-        <div className="p-4 bg-black text-teal h-screen">
+        <div>
+            <SurpriseNav />
             <div>{children}</div>
         </div>
     );
