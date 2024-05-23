@@ -9,8 +9,16 @@ function Page() {
     return (
         <div className='flex flex-col p-8 text-center'>
             <div>
-                <span className='text-gold bg-gray rounded-md'>"What's this?"</span> <span className='text-black'>I hear you saying.</span> <span className='text-gold bg-gray rounded-md'>"This isn't a registry."</span>
-                <div>And you're right! While we were talking about this whole wedding idea, we realized that we don't really <span className='italic'>need</span> more things. Our big goal, the one thing we need help with, is <span className='font-bold'>buying a house</span>. So, as unconventional as it is, we ask that if you really want to contribute to our registry, <span className='text-blue font-bold bg-gold rounded-md'>please donate any amount to one of our Venmo accounts using the description <span className='text-lg'>#AUTERFRIDAYFOREVER</span> so we can drop it into our house savings account.</span> And wish us luck!</div>
+                <div>
+                    Here's another surprise for you - <span className='text-gold bg-gray rounded-md'>we don't actually have a registry!</span>
+                </div>
+                <div>
+                    We are extremely fortunate to have all the things we could need, but we do have <span className='text-blue  bg-gold rounded-md'><span className='font-bold'>one big goal,</span> and it’s one that we'd graciously accept help with: buying a house.</span>
+                </div>
+                <div>
+                    As unconventional as it is, we ask that if you'd like to contribute to our registry, that you donate any amount to one of our Venmo or Paypal accounts using <span className='text-lg font-mono rounded-md border border-green p-1'>#AUTERFRIDAYFOREVER</span> in the comment box so we can drop it into our house savings account.
+                </div>
+                <div className='text-lg text-green font-bold'>And wish us luck! ;)</div>
             </div>
             <div className='flex flex-col md:flex-row justify-center'>
                 <div className='m-4'>
