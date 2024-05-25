@@ -15,7 +15,7 @@ function Page() {
             />
             <div className="flex flex-col md:flex-row justify-between mt-8">
                 <div className={descriptionContainerStyle}><div className="text-lg font-bold italic">MAR 2016</div>
-We met while working together at a dog daycare! Hal was the first person Olivia saw after walking into the building (though it was more like stumbling in after misunderstanding the entry gate mechanism) for her interview. Both of us later shared that we felt something special in that moment. <div className="italic">Hal stepping in here to add: felt immediately at ease, felt like laughing. :shrug:</div> </div>
+                    We met while working together at a dog daycare! Hal was the first person Olivia saw after walking into the building (though it was more like stumbling in after misunderstanding the entry gate mechanism) for her interview. Both of us later shared that we felt something special in that moment.</div>
                 <Image
                     src={storyHeader}
                     alt="temporary image"
