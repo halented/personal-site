@@ -8,8 +8,6 @@
 }
 
 .embla__slide {
-    display: flex;
-    justify-content: center;
     margin: 0 1rem 0 1rem;
     flex: 0 0 100%;
     min-width: 0;

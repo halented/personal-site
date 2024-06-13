@@ -15,6 +15,7 @@ const config: Config = {
       gold: '#D7A84A',
       gray: '#1f2937',
       green: '#747444',
+      lightBeige: '#fde6b6',
       lightGray: '#4b5563',
       lightPrimaryRed: '#fca5a5',
       lightTeal: '#2dd4bf',

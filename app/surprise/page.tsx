@@ -6,7 +6,7 @@ import story from '@/app/assets/surprise/landing/story.png';
 import gallery from '@/app/assets/surprise/landing/gallery.png';
 import playlist from '@/app/assets/surprise/landing/playlist.png';
 import registry from '@/app/assets/surprise/landing/registry.png';
-import proposal from '@/app/assets/surprise/landing/proposal.png';
+import guestbook from '@/app/assets/surprise/landing/guestbook.png';
 /**
  beige: #D4BC8C
  gold: #D7A84A
@@ -60,7 +60,7 @@ function Page() {
                     </Link>
                 </div>
             </div>
-            {/* playlist, registry, proposal links */}
+            {/* playlist, registry, guestbook links */}
             <div className='flex flex-col self-center justify-center'>
                 <Link href='/surprise/gallery'>
                     <div className={imageContainer}>
@@ -73,10 +73,10 @@ function Page() {
                         />
                     </div>
                 </Link>
-                <Link href='/surprise/us'>
+                <Link href='/surprise/guestbook'>
                     <div className={imageContainer}>
                         <Image
-                            src={proposal}
+                            src={guestbook}
                             alt="clickable image"
                             className={linkImage}
                             width={300}
