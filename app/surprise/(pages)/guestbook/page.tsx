@@ -13,7 +13,6 @@ function Page() {
                 width={300}
                 height={100}
             />
-            <GuestbookForm />
             <GuestbookContent />
         </div>
     );
