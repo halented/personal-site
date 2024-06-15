@@ -1,11 +1,9 @@
-# Hal's Personal Portfolio Site (under construction)
-If you'd like, you can preview this site by cloning it locally. Once cloned...
+# Hal's Personal Portfolio Site (under construction forever)
+Live at https://halented.com/
 
-1. Execute `npm i` to install dependencies
-2. Execute `npm run dev` to spin up development server
-3. Open [http://localhost:3000](http://localhost:3000) with your browser to view the site
+Wedding announcement at https://halented.com/surprise 
 
-Feedback and comments are very welcome as I am learning NextJS and Tailwind :)
+In-development Beamsaber timers at https://halented.com/timers
 
 ## Deploy on Vercel
 
