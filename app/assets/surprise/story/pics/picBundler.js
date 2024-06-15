@@ -11,6 +11,7 @@ import j from './Untitled_Artwork-10.png'
 import k from './Untitled_Artwork-11.png'
 import l from './Untitled_Artwork-12.png'
 import m from './Untitled_Artwork-13.png'
+import n from './Untitled_Artwork-14.png'
 
 
 let storyPics = [
@@ -26,7 +27,8 @@ let storyPics = [
     j,
     k,
     l,
-    m
+    m,
+    n
 ]
 
 export {

@@ -16,9 +16,11 @@ function Page() {
                     We are extremely fortunate to have all the things we could need, but we do have <span className='text-blue  bg-gold rounded-md'><span className='font-bold'>one big goal,</span> and it’s one that we'd graciously accept help with: buying a house.</span>
                 </div>
                 <div>
-                    As unconventional as it is, if you'd like to contribute to our registry, we ask that you donate any amount to one of our Venmo or Paypal accounts using <span className='text-lg font-mono rounded-md border border-green p-1'>#AUTERFRIDAYFOREVER</span> in the comment box so we can drop it into our house savings account.
+                    As unconventional as it is, if you'd like to contribute to our registry, we ask that you donate any amount to one of our Venmo, Paypal, or Zelle accounts using <span className='text-lg font-mono rounded-md border border-green p-1'>#AUTERFRIDAYFOREVER</span> in the comment box so we can drop it into our house savings account.
                 </div>
-                <div className='text-lg text-green font-bold'>And wish us luck! ;)</div>
+                <div className='text-lg text-green font-bold mb-4'>And wish us luck! ;)</div>
+                <div><span className='font-bold'>PayPal:</span> heyhalfriday@gmail.com, ogauter@gmail.com</div>
+                <div><span className='font-bold'> Zelle: </span>ogauter@gmail.com</div>
             </div>
             <div className='flex flex-col md:flex-row justify-center'>
                 <div className='m-4'>
