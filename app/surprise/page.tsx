@@ -62,7 +62,7 @@ function Page() {
             </div>
             {/* playlist, registry, guestbook links */}
             <div className='flex flex-col self-center justify-center'>
-                <Link href='/surprise/gallery'>
+                <Link href='https://gallery.rovecoast.com/-oliviahal/gallery' passHref={true} target='blank'>
                     <div className={imageContainer}>
                         <Image
                             src={gallery}
